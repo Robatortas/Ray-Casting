@@ -66,12 +66,11 @@ public class Driver extends Canvas implements Runnable {
 		while(running) {
 			tick();
 			render();
-			i2++;
 		}
 	}
 	
 	private void tick() {
-		
+		i2++;
 	}
 	
 	private void render() {
@@ -87,6 +86,7 @@ public class Driver extends Canvas implements Runnable {
 		
 		Color color = new Color(random.nextInt(0xffffff));
 		g.setColor(color.green);
+		// ":" equals line to lines
 		for(Line2D.Float line : lines) {
 			g.drawLine((int) line.x1, (int) line.y1, (int) line.x2, (int) line.y2);
 		}
